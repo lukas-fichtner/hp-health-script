@@ -1,8 +1,8 @@
 #!/bin/bash
 ###
-#HP-Health  v0.1.0
+#HP-Health  v0.1.1
 #Script by Xedon 19.06.2019
-#last update 19.06.2019
+#last update 20.06.2019
 #If something went wrong with your HP Server this script will send an error email
 ###
 MAIL=xedon@arctic-network.com
