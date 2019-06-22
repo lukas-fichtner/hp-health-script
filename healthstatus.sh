@@ -1,8 +1,8 @@
 #!/bin/bash
 ###
-#HP-Health  v0.1.1
+#HP-Health  v0.1.2
 #Script by Xedon 19.06.2019
-#last update 20.06.2019
+#last update 22.06.2019
 #If something went wrong with your HP Server this script will send an error email
 ###
 MAIL=xedon@arctic-network.com
@@ -44,7 +44,7 @@ msg="Fan Speed Warning"
 echo $msg
 logger -p syslog.error -t fan "$msg"
 hpasmcli -s "show fan; show server; show temp" > $HPACUCLI_TMP_fan_speed
-mail -s "[HP] $HOSTNAME [ERROR] - $msg" "$MAIL" < $HPACUCLI_TMP_fan_speed
+mail -s "[HP] $HOSTNAME [WARNING] - $msg" "$MAIL" < $HPACUCLI_TMP_fan_speed
 rm -f $HPACUCLI_TMP_fan_speed
 else
 echo "Everything Good"

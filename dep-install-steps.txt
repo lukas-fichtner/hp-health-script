@@ -1,8 +1,0 @@
--------------------------INSTALLATION von HP-Health by Xedon-------------------------
-
-1.  nano /etc/apt/sources.list.d/hp.list
-copy & paste deb http://downloads.linux.hpe.com/SDR/repo/mcp trusty/current non-free
-
-2. curl http://downloads.linux.hpe.com/SDR/hpePublicKey2048_key1.pub | apt-key add -
-
-3. apt update && apt install hp-health hponcfg hp-snmp-agents
