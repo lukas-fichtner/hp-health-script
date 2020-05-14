@@ -4,7 +4,7 @@ Für ältere Server (zb. HP Server mit iLO3 wie in meinem Fall) haben keine Mög
 
 ## Installation
 
-#### Dependencies installieren:
+#### Dependencies installieren (old Kernel Versions):
 
 ```bash
 nano /etc/apt/sources.list.d/hp.list
@@ -21,6 +21,21 @@ zum Schluss noch die Pakete installieren:
 ```bash
 apt update && apt install hp-health hponcfg hp-snmp-agents ssmtp mailutils
 ```
+
+#### Dependencies installieren (Linux Kernel 5.0+):
+Website öffnen und aktuelle Version downloaden
+```bash
+https://hwraid.le-vert.net/debian/pool-buster/hpacucli/
+```
+anschließend folgenden Command ausführen
+```bash
+sudo dpkg -i //package-name//
+```
+zum Schluss noch die Pakete installieren:
+```bash
+apt update && apt install mailutils
+```
+
 #### Script einrichten:
 Script herunterladen:
 ```bash
